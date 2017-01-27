@@ -24,6 +24,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Pay Bills | @yield('title')</title>
 
+    <!-- Bootstrap -->
+    <link href="/vendor/dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/dist/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
     <!-- Page styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -110,7 +114,7 @@
         <a name="top"></a>
         <div class="android-be-together-section mdl-typography--text-center">
           <div class="logo-font android-slogan">Pay through Us, Live life with fuss!</div>
-          <div class="logo-font android-sub-slogan">welcome to Pay Bills... be yourself. do your thing. see what's going on.</div>
+          <div class="logo-font android-sub-slogan">Welcome to Pay Bills... be yourself. do your thing. see what's going on.</div>
           <div class="logo-font android-create-character">
             <a href=""><img src="/images/web/andy.png"> create your Pay Bills account</a>
           </div>
@@ -318,7 +322,7 @@
         </footer>
       </div>
     </div>
-    <a href="/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
+    <script src="/vendor/dist/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>

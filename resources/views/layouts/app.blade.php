@@ -14,6 +14,9 @@
     <link href="/css/app.css" rel="stylesheet">
     <link href="/vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- Bootstrap -->
+    <link href="/vendor/dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/dist/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     @yield('header-styles')
 
     <!-- Scripts -->
@@ -85,6 +88,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="/vendor/dist/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/app.js"></script>
     @yield('footer-scripts')
 

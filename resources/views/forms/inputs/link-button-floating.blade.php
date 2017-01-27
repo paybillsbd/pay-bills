@@ -1,0 +1,1 @@
+<a href="{{ $href }}" target="{{ $target or '_blank' }}" id="link-button-floating-{{ $id }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">{{ $text }}</a>
