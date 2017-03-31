@@ -19,7 +19,7 @@ class PaymentServiceController extends Controller
         {
             $term = $request->input('search');
             $servicesArr = collect(array_where(ServiceManager::getPaymentServices(), function ($item, $key) use($term) {
-                return is_string($item['text']) && str_contains($item['text'], $term);
+                return is_string($item['text']) && str_contains(strtolower($item['text']), strtolower($term));
             }))->values();
             $data = [
                 'items' => count($servicesArr) == 0 ? ServiceManager::getPaymentServices() : $servicesArr,
