@@ -103,6 +103,10 @@
           <a class="mdl-navigation__link" href="">About Us</a>
           <a class="mdl-navigation__link" href="">Career</a>
           <a class="mdl-navigation__link" href="">Innovations</a>
+          @if (Route::has('login'))
+          <a class="mdl-navigation__link" href="{{ url('/login') }}">Login</a>
+          <a class="mdl-navigation__link" href="{{ url('/register') }}">Register</a>
+          @endif
           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link" href="">More ...</span>
           <a class="mdl-navigation__link" href="">Charity</a>

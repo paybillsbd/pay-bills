@@ -22,7 +22,7 @@
             "app/Models"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "PayBills\\": "app/"
         }
     },
     "autoload-dev": {

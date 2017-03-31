@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace PayBills\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;
