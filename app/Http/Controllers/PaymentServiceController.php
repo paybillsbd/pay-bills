@@ -17,31 +17,7 @@ class PaymentServiceController extends Controller
         //
         if($request->ajax())
         {
-            $term = $request->input('search');
-            $servicesNotFiltered = ServiceManager::getPaymentServices();
-            
-            $filteredChildren = [];
-            $servicesArr = collect(array_where($servicesNotFiltered, function ($item, $key) use($term, &$filteredChildren) {
-                
-                $children = array_get($item, 'children');
-                $result = array_where($children, function ($item, $key) use($term) {
-                    $text = array_get($item, 'text');                   
-                    return is_array($item) && array_has($item, 'text') && is_string($text) && str_contains(strtolower($text), strtolower($term));
-                });
-                if(count($result) > 0)
-                    $filteredChildren []= collect($result)->values();
-                return is_array($item) && count($result) > 0;
-
-            }))->mapWithKeys(function ($item) use($term, $filteredChildren) { // mapWithKeys maps the filtered children with group titles
-                return [
-                    [ 'text' => $item['text'], 'children' => array_collapse($filteredChildren) ] // array_collapse() removes outer wrapped array from filter
-                ];
-            });
-            $data = [
-                'items' => count($servicesArr) == 0 ? $servicesNotFiltered : $servicesArr,
-                'total_count' => count($servicesArr) == 0 ? count($servicesNotFiltered) : count($servicesArr)
-            ];
-            return response()->json($data);
+            return response()->json(ServiceManager::search($request->input('search')));
         }
         return response('No view implemented', 404);
     }
