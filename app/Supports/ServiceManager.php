@@ -7,6 +7,12 @@ class ServiceManager
 {	
     const API_PREFIX = '/api';
     const API_SERVICES = '/services';
+    const SERVICES = [
+        'Technology' => [ 'Telecom operators', 'Internet ISPs' ],
+        'Social' => [ 'Home rents', 'Water bills', 'Electricity Bills' ],
+        'Education' => [ 'Tuition fees' ],
+        'Transportation' => [ 'Air tickets', 'Bus tickets', 'Train tickets' ]
+    ];
 
     public static function getApiServices($version)
     {
@@ -15,13 +21,17 @@ class ServiceManager
 
     public static function getPaymentServices()
     {
-    	return [
-			[ 'id' => 1, 'text' => 'Telecom operators' ],
-			[ 'id' => 2, 'text' => 'Internet ISPs' ],
-			[ 'id' => 3, 'text' => 'Home rents' ],
-			[ 'id' => 4, 'text' => 'Social services' ],
-			[ 'id' => 5, 'text' => 'Tuition fees' ],
-			[ 'id' => 6, 'text' => 'Transport Ticket' ],
-		];
+        $options = [];
+        $optionId = 0;
+        foreach (self::SERVICES as $group => $services)
+        {
+            $children = [];
+            foreach ($services as $id => $service)
+            {
+                $children []= [ 'id' => ++$optionId, 'text' => $service ];
+            }
+            $options []= [ 'text' => $group, 'children' => $children ];
+        }
+    	return $options;
     }
 }
