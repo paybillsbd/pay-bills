@@ -36,32 +36,8 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">Paybills</a>
+    @include('includes.payment-ui.navbar')
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ABOUT</a>
-          </li>
-         
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-
-    <br>
-    
     <div class="container">
 
         <div class="row">
@@ -74,60 +50,9 @@
                         <h5>Recharge Your Mobile</h5>
                       </div>
                       <div class="card-block">
-                       <div class="row step-progress">
-                        <div class="step-slider">
-                          <div data-id="step1" class="step-slider-item"></div>
-                          <div data-id="step2" class="step-slider-item"></div>
-                          <div data-id="step3" class="step-slider-item"></div>
-                        </div>
-                        <div class="step-content">
-                          <!-- <div id="step1" class="step-content-body">Step 1</div>
-                          <div id="step2" class="step-content-body out">Step 2</div>
-                          <div id="step3" class="step-content-body out">Step 3</div>
-                          <div id="step4" class="step-content-body out">Step 4</div>
-                          <div id="stepLast" class="step-content-body out">Completed</div> -->
-                          <!-- <div class="step-content-foot">
-                            <button type="button" class="active" name="prev">Prev</button>
-                            <button type="button" class="active" name="next">Next</button>
-                            <button type="button" class="active out" name="finish">Finish</button>
-                          </div> -->
-                        </div>
-                      </div>
+                       @include('includes.payment-ui.step-progress')
                       <div id="recharge-first">
-                        <form>
-                            <div class="row text-left">
-                                <div class="col-md-6">
-                                <label class="custom-control custom-radio">
-                                  <input id="radio1" name="radio" type="radio" class="custom-control-input">
-                                  <span class="custom-control-indicator"></span>
-                                  <span class="custom-control-description">Prepaid</span>
-                                </label>
-                                </div>
-                                <div class="col-md-6">
-                                    
-                                    <label class="custom-control custom-radio">
-                                      <input id="radio2" name="radio" type="radio" class="custom-control-input">
-                                      <span class="custom-control-indicator"></span>
-                                      <span class="custom-control-description">Postpaid</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                            
-                              <div class="col-md-6">
-                                <input required type="text"
-                                pattern="^(?:\+?88)?01[15-9]\d{8}$" class="form-control" id="formGroupExampleInput2" placeholder="Enter a Valid Mobile Number">
-                              </div>
-                              <div class="col-md-6">
-                                  <input required type="number" class="form-control" id="formGroupExampleInput2" placeholder="Recharge Amount">
-                              </div>
-                            </div>
-                            <br>
-                            <div class="form-group">
-                                <button type="submit" id="recharge-submit-first" class="btn btn-primary btn-block">Proceed To Recharge</button>
-                            </div>
-                        </form> 
+                        @include('includes.payment-ui.recharge-form')
 
                       </div>
 
