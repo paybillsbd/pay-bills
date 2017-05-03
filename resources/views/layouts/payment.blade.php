@@ -16,6 +16,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.min.css">
     <!-- <link rel="stylesheet" href="css/glyphicons.css"> -->
     <script src="https://use.fontawesome.com/9d0d2eaea9.js"></script>
     <!-- Custom CSS -->
@@ -39,38 +40,14 @@
     @include('includes.payment-ui.navbar')
 
     <div class="container">
-
-        <div class="row">
-            <!-- search context -->
-            <div class="col-md-8 offset-md-2">
-                
-                <div class="recharge">
-                    <div class="card text-center">
-                      <div class="card-header">
-                        <h5>Recharge Your Mobile</h5>
-                      </div>
-                      <div class="card-block">
-                       @include('includes.payment-ui.step-progress')
-                      <div id="recharge-first">
-                        @include('includes.payment-ui.recharge-form')
-
-                      </div>
-
-                      </div>
-                      <div class="card-footer text-muted">
-                        {{ config('app.name', 'Laravel') }}
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end search context -->
-
-        </div>
-        <!-- /.row -->
-
+        @yield('content')
     </div>
 
     <script src="/js/jquery.js"></script>
+    <script
+  src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"
+  integrity="sha256-eEa1kEtgK9ZL6h60VXwDsJ2rxYCwfxi40VZ9E0XwoEA="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
@@ -109,6 +86,56 @@
             })
 
         });
+    </script>
+    <script>
+      $( function() {
+        $( "#startDate" ).datepicker();
+        $( "#endDate" ).datepicker();
+
+        var options = [
+          "ActionScript",
+          "AppleScript",
+          "Asp",
+          "BASIC",
+          "C",
+          "C++",
+          "Clojure",
+          "COBOL",
+          "ColdFusion",
+          "Erlang",
+          "Fortran",
+          "Groovy",
+          "Haskell",
+          "Java",
+          "JavaScript",
+          "Lisp",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Scheme"
+        ];
+        $( "#search-options" ).autocomplete({
+          source: options
+        });
+
+      } );
     </script>
 <!-- 
     <script type="text/javascript">
