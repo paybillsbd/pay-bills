@@ -91,7 +91,8 @@
       $( function() {
         $( "#startDate" ).datepicker();
         $( "#endDate" ).datepicker();
-
+        $( ".departure" ).datepicker();
+        
         var options = [
           "ActionScript",
           "AppleScript",
@@ -132,6 +133,14 @@
           "Scheme"
         ];
         $( "#search-options" ).autocomplete({
+          source: options
+        });
+
+        $( ".suggest-from" ).autocomplete({
+          source: options
+        });
+
+        $( ".suggest-to" ).autocomplete({
           source: options
         });
 

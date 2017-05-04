@@ -25,13 +25,17 @@ Route::group([ 'as' => 'user::', 'middleware' => 'web' ], function() {
 // routes for mobile recharge
 
 Route::get('/mobile-recharge', function(){
-	return View::make('layouts.mobile-recharge');
+	return View::make('query.mobile-recharge');
 });
 
 Route::get('/hotel-booking', function(){
-	return View::make('layouts.hotel-booking');
+	return View::make('query.hotel-booking');
 });
 
+
+Route::get('/travel-booking', function(){
+	return View::make('query.travel-booking');
+});
 
 
 Route::get('/recharge-login', function(){
