@@ -37,6 +37,10 @@ Route::get('/travel-booking', function(){
 	return View::make('query.travel-booking');
 });
 
+Route::get('/index', function(){
+	return View::make('homes.home-search');
+});
+
 
 Route::get('/recharge-login', function(){
 	return View::make('includes.recharge-login');
