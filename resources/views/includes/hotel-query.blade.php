@@ -16,13 +16,13 @@
 		      </div>
 		      <div class="col">                                    
 		      	<div class="form-group">
-		      		<input placeholder="mm/dd/yyyy" class="form-control" type="text" id="startDate" name="">
+		      		<input placeholder="Start Date (mm/dd/yyyy)" class="form-control" type="text" id="startDate" name="">
 		
 		      	</div>
 		      </div>
 		      <div class="col">                                    
 		      	<div class="form-group">
-		      		<input placeholder="mm/dd/yyyy" class="form-control" type="text" id="endDate" name="">
+		      		<input placeholder="End Date (mm/dd/yyyy)" class="form-control" type="text" id="endDate" name="">
 		
 		      	</div>
 		      </div>

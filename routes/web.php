@@ -47,5 +47,8 @@ Route::get('/recharge-login', function(){
 });
 
 
+Route::get('/payment', function(){
+	return View::make('includes.payment-ui.bank-payment');
+});
 
 // end routes for mobile recharge

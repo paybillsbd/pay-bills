@@ -3,20 +3,42 @@
             <div class="card-block">
                 <form>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Start Date">
+                    <input type="text" class="form-control departure" placeholder="Start Date">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="End Date">
+                    <input type="text" class="form-control departure" placeholder="End Date">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Room">
-                  </div>
+		      		<select class="custom-select form-control">
+					  <option selected>Room</option>
+					  <option value="1">One</option>
+					  <option value="2">Two</option>
+					  <option value="3">Three</option>
+					</select>
+		
+		      	  </div>
                   <div class="row">
                       <div class="col-md-6">
-                          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Person">
+                          <div class="form-group">
+				      		<select class="custom-select form-control">
+							  <option selected>Person</option>
+							  <option value="1">1 Person</option>
+							  <option value="2">2 Person</option>
+							  <option value="3">3 Person</option>
+							</select>
+				
+				      	</div>
                       </div>
                       <div class="col-md-6">
-                          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Child">
+                          <div class="form-group">
+				      		<select class="custom-select form-control">
+							  <option selected>Children</option>
+							  <option value="1">1 Children</option>
+							  <option value="2">2 Children</option>
+							  <option value="3">3 Children</option>
+							</select>
+				
+				      	</div>
                       </div>
                   </div>
                   <br>
