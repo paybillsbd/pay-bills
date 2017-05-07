@@ -23,6 +23,16 @@
     <link rel="stylesheet" href="/css/custom.css">
 
     <style>
+        .text-right{
+          float:right;
+        }
+        .bdt{
+          font-weight: bolder;
+          font-size:20px;
+        }
+        .bank{
+          padding: 0.4rem;
+        }
 
     </style>
 
