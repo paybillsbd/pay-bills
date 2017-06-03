@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="/css/custom.css">
 
     <style>
+        .info-content>h3, .info-content>h5, .info-content>a{
+          font-size: 2vw;
+        }
         .text-right{
           float:right;
         }
@@ -33,6 +36,27 @@
         .bank{
           padding: 0.4rem;
         }
+        .image {
+            width: 100%;
+            height: 100%;    
+        }
+        .pay-logo{
+          -webkit-transition: all 1s ease; /* Safari and Chrome */
+          -moz-transition: all 1s ease; /* Firefox */
+          -ms-transition: all 1s ease; /* IE 9 */
+          -o-transition: all 1s ease; /* Opera */
+          transition: all 1s ease;
+        }
+        .pay-logo:hover{
+          -webkit-transform:scale(1.25); /* Safari and Chrome */
+          -moz-transform:scale(1.25); /* Firefox */
+          -ms-transform:scale(1.25); /* IE 9 */
+          -o-transform:scale(1.25); /* Opera */
+           transform:scale(1.25);
+
+        }
+
+       
 
     </style>
 
