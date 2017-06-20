@@ -117,7 +117,7 @@
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
         <div class="android-be-together-section mdl-typography--text-center">
-          <div class="logo-font android-slogan">Pay through Us, Live life with fuss!</div>
+          <div class="logo-font android-slogan">Pay through Us, Live life without fuss!</div>
           <div class="logo-font android-sub-slogan">Welcome to Pay Bills... be yourself. do your thing. see what's going on.</div>
           <div class="logo-font android-create-character">
             <a href=""><img src="/images/web/andy.png"> create your Pay Bills account</a>
